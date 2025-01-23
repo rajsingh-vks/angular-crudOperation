@@ -1,0 +1,14 @@
+<p>product works!</p>
+<div class="row">
+  @for(prod of productData;track prod.id){
+  <div class="col-sm-4">
+    <div class="card mb-4" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">{{prod.name}}</h5>
+        <p class="card-text">Price : Rs. {{prod.price}} <br /> Quantity : {{prod.quantity}}</p>
+        <button class="btn btn-danger" (click)="delPro(prod.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+  }
+</div>
